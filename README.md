@@ -3,6 +3,8 @@
 ## Quarks Assignment
 
 ### Activity 1
+I have built this web application using Java and Spring Boot.
+Source code is present in `Quarks/quarks-assignment`
 
 Using Eclipse
 1. Download and install Eclipse Java EE IDE for Web Developers.
@@ -13,5 +15,7 @@ Using Eclipse
 
 
 ### Activity 2
+I have written this program in Java.
+
 1. `Quarks/quarks-assignment-2/src` contains both the source code and unit tests.
 2. To run program : `javac StringEncoder.java && java StringEncoder`
