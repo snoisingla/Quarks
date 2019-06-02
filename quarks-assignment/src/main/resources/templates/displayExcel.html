@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Quarks</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+	  <body>
+	  		<form th:action="@{/data}" method="get">
+	  			Name: <input type="text" th:name="name">
+	  			Email: <input type="text" th:name="email">
+	  			Phone: <input type="text" th:name="phone">
+				<input th:type="submit" value="Search" />
+	  		</form>
+	  		<table>
+	  			<tr>
+	  				<th>Employee Name</th>
+	  				<th>Email</th>
+	  				<th>Address</th>
+	  				<th>Phone Number</th>
+	  			</tr>
+	  			<tr th:each="employee: ${employees}">
+	  				<th th:text="${employee.name}"></th>
+    				<th th:text="${employee.email}"></th>
+    				<th th:text="${employee.address}"></th>
+    				<th th:text="${employee.phone}"></th>
+    				<th>
+    				
+					<form th:action="${'items/'+employee.id+'/delete'}" method="POST">
+					<input th:type="submit" value="Delete" />		
+					</form>		
+					</th>
+				</tr>
+	  		</table>
+	  		
+	  		
+	  </body>
+  </html>
