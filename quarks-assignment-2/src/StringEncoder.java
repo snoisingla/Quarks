@@ -25,6 +25,7 @@ public class StringEncoder {
 		return finalString;
 	}
 	public static void main(String[] args) {
+		System.out.println("Please enter input string : ");
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
 		String result = encodeString(str);
